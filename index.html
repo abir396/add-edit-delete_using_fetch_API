@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../task3/css/style.css" />
+  <script type="text/javascript" src="../task3/js/main.js"></script>
+</head>
+<body>
+  <form id="new-task-form" name="myForm">
+    <header>
+      <p><strong>All Details Fetch From An API</strong></p>
+      <p>Designed By- Abir Pal (17/09/2023)</p>
+      <hr>
+      <div class="row">
+        <table id="barContainer">
+          <tr>
+            <td class="barText">Employee Details</td>
+              <td class="bar">
+                <img src="../task3/images/create.png" alt="AddIcon" title="Add" style="width: 30px ; height: 30px;" onclick="showModal();">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </header>
+    <section class="employee_details">
+      <div class="row">
+        <table bordercolor="10px" id="tableContainer"></table>
+      </div>
+    </section>
+    <!-- The Modal -->
+    <div id="employeeModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal();">&times;</span>
+        <header>
+          <p class="modal-header">Add Products</p>
+        </header>
+        <table style="width: 100%;">
+        <tr>
+           <td class="colitem" ></td>
+           <td class="colitem" style="text-align: right;"><strong>Title:</strong></td>
+           <td class="colitem"> <input type="text" id="newProductTitle" placeholder="Enter product name" name="product_title" ></td>
+           <td class="colitem"></td>
+       </tr>
+       <tr>
+           <td class="colitem" ></td>
+           <td colitem style="text-align: right;"><strong>Price :</strong></td>
+           <td class="colitem"><input type="number" id="newProductPrice" placeholder="Enter Product price" name="product_price" ></td>
+           <td class="colitem"></td>
+       </tr>
+       <tr>
+        <td class="colitem"></td>
+        <td colitem style="text-align: right;"><strong> Stock :</strong></td>
+        <td class="colitem"><input type="number" id="newProductStock" placeholder="Enter Stock of Product" name="product_stock" ></td>
+        <td class="colitem"></td>
+       </tr>
+       <tr>
+        <td class="colitem" ></td>
+        <td colitem style="text-align: right;"><strong>Rating :</strong></td>
+        <td class="colitem"><input type="number" id="newproductRating" placeholder="Enter Product Rating" name="product_rating" ></td>
+        <td class="colitem"></td>
+       </tr>
+            <footer>
+                <tr>
+                    <td class="colitem"></td>
+                    <td class="colitem">
+                        <button type="submit" name="Save" value="submit" onclick="createData(); return false;">Save</button>
+                        <button type="reset" value="reset" onclick="Delete(count);">Delete</button>
+                    </td>
+                    <td class="colitem"></td>
+                </tr>
+            </footer>
+</body>
+</html>
